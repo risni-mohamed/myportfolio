@@ -11,7 +11,7 @@ function App() {
       title: "My Portfolio Website",
       description: "A responsive portfolio Website.",
       tech: ["React", "TailwindCSS"],
-      github: "#",
+      github: "https://github.com/risni-mohamed/myportfolio",
       demo: "#"
     },
     {
