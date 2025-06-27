@@ -12,7 +12,7 @@ function App() {
       description: "A responsive portfolio Website.",
       tech: ["React", "TailwindCSS"],
       github: "https://github.com/risni-mohamed/myportfolio",
-      demo: "#"
+      demo: "https://risnimhdofficial.vercel.app/"
     },
     {
       title: "Car Rental and Booking Website",
@@ -38,11 +38,10 @@ function App() {
 
   return (
     <div className="min-h-screen bg-gray-900 text-white">
-      {/* Navigation */}
+      
 <nav className="fixed top-0 w-full bg-gray-900/95 backdrop-blur-md z-50 border-b border-gray-700/50 shadow-lg shadow-black/20">
   <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
     <div className="flex justify-between items-center py-4">
-      {/* Logo with enhanced styling */}
       <div className="relative group">
         <div className="text-2xl font-bold bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent hover:from-blue-300 hover:via-purple-400 hover:to-pink-400 transition-all duration-300 cursor-pointer">
           Risni Rafeek
@@ -50,7 +49,6 @@ function App() {
         <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-purple-500 group-hover:w-full transition-all duration-300"></div>
       </div>
       
-      {/* Desktop Navigation with enhanced effects */}
       <div className="hidden md:flex space-x-1">
         {['Home', 'About', 'Education', 'Projects', 'Contact'].map((item) => (
           <a 
@@ -65,7 +63,7 @@ function App() {
         ))}
       </div>
 
-      {/* Mobile menu button with enhanced styling */}
+      
       <button 
         className="md:hidden relative p-2 rounded-lg bg-gray-800/50 hover:bg-gray-700/50 border border-gray-700/50 hover:border-gray-600 transition-all duration-300 group"
         onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -80,7 +78,6 @@ function App() {
       </button>
     </div>
 
-    {/* Mobile menu with enhanced animations */}
     {isMenuOpen && (
       <div className="md:hidden py-6 border-t border-gray-700/50 bg-gray-900/95 backdrop-blur-sm">
         <div className="flex flex-col space-y-2">
@@ -120,7 +117,7 @@ function App() {
   }
 `}</style>
 
-      {/* Hero Section */}
+{/* Hero Section */}
 <section id="home" className="relative pt-20 pb-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
   {/* Background Elements */}
   <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-purple-900/20 to-pink-900/20"></div>
@@ -129,14 +126,12 @@ function App() {
   
   <div className="relative max-w-6xl mx-auto text-center">
     <div className="mb-8">
-      {/* Enhanced Profile Image */}
+      {/*Profile Image */}
       <div className="relative mb-8">
         <div className="w-44 h-44 rounded-full mx-auto overflow-hidden relative group">
-          {/* Animated Border */}
           <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 p-1 animate-spin-slow">
             <div className="w-full h-full rounded-full bg-gray-900"></div>
           </div>
-          {/* Image Container */}
           <div className="absolute inset-1 rounded-full overflow-hidden bg-gradient-to-br from-blue-500/20 to-purple-500/20 group-hover:scale-105 transition-transform duration-500">
             <img 
               src={profileImage} 
@@ -144,12 +139,10 @@ function App() {
               className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
             />
           </div>
-          {/* Glow Effect */}
           <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-400/30 to-purple-500/30 blur-md group-hover:blur-lg transition-all duration-500 opacity-0 group-hover:opacity-100"></div>
         </div>
       </div>
 
-      {/* Enhanced Title */}
       <div className="mb-6">
         <div className="inline-block mb-4 px-4 py-2 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-full border border-blue-500/20">
           <span className="text-sm font-medium bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
@@ -167,7 +160,6 @@ function App() {
         </h1>
       </div>
 
-      {/* Enhanced Description */}
       <div className="mb-10 max-w-3xl mx-auto">
         <p className="text-xl sm:text-2xl text-gray-300 mb-4 leading-relaxed">
           Dedicated to crafting <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500 font-semibold">user-friendly web experiences</span> while continuously learning and adapting to new technologies.
@@ -184,7 +176,7 @@ function App() {
         </div>
       </div>
 
-      {/* Enhanced Action Buttons */}
+      {/*Action Buttons */}
       <div className="flex justify-center space-x-4 flex-wrap gap-y-4">
         <a 
           href="#projects" 
@@ -257,10 +249,10 @@ function App() {
       <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full mx-auto"></div>
     </div>
 
-    <div className="grid lg:grid-cols-2 gap-16 items-center">
-      {/* Content Side */}
+    <div className="grid lg:grid-cols-2 gap-16 items-start">
+      {/*Content Side*/}
       <div className="space-y-8">
-        {/* Story Cards */}
+        {/*Story Cards */}
         <div className="space-y-6">
           <div className="group relative p-6 bg-gray-800/50 backdrop-blur-sm rounded-2xl border border-gray-700/50 hover:border-blue-500/30 transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/10">
             <div className="flex items-start space-x-4">
@@ -292,6 +284,50 @@ function App() {
                   Through internships and collaborative projects, I'm focused on growing my technical 
                   skills while contributing to applications that make a <span className="text-purple-400 font-medium">meaningful impact</span>.
                 </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Professional Qualifications */}
+        <div className="space-y-4">
+          <h3 className="text-xl font-bold text-white flex items-center">
+            <div className="w-8 h-8 bg-gradient-to-br from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mr-3">
+              <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+              </svg>
+            </div>
+            <span className="bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">
+              Certifications
+            </span>
+          </h3>
+          
+          <div className="group relative p-5 bg-gradient-to-br from-green-900/20 to-emerald-900/20 backdrop-blur-sm rounded-2xl border border-green-500/20 hover:border-green-400/40 transition-all duration-300 hover:shadow-xl hover:shadow-green-500/10">
+            <div className="flex items-start justify-between">
+              <div className="flex-1">
+                <div className="flex items-center space-x-3 mb-2">
+                  <h4 className="text-lg font-semibold text-white">Responsive Web Design</h4>
+                  <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                </div>
+                <p className="text-green-400 font-medium text-sm mb-2">freeCodeCamp</p>
+                <div className="flex items-center space-x-4 text-sm text-gray-400">
+                  <span>Issued May 2025</span>
+                  <span>•</span>
+                  <span className="font-mono">ID: mohamedrisni-rwd</span>
+                </div>
+              </div>
+              <div className="flex-shrink-0 ml-4">
+                <a 
+                  href="https://www.freecodecamp.org/certification/MohamedRisni/responsive-web-design"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-4 py-2 bg-green-600/20 hover:bg-green-600/30 border border-green-500/30 hover:border-green-400/50 rounded-lg text-green-400 hover:text-green-300 text-sm font-medium transition-all duration-300 flex items-center space-x-2"
+                >
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                  <span>View Credential</span>
+                </a>
               </div>
             </div>
           </div>
