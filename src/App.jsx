@@ -313,7 +313,7 @@ function App() {
                 <div className="flex items-center space-x-4 text-sm text-gray-400">
                   <span>Issued May 2025</span>
                   <span>•</span>
-                  <span className="font-mono">ID: mohamedrisni-rwd</span>
+                  {/*<span className="font-mono">ID: mohamedrisni-rwd</span>*/}
                 </div>
               </div>
               <div className="flex-shrink-0 ml-4">
@@ -393,7 +393,7 @@ function App() {
         </div>
 
         {/* Learning Path */}
-        <div className="p-6 bg-gradient-to-br from-blue-900/20 to-purple-900/20 rounded-2xl border border-blue-500/20">
+        {/*<div className="p-6 bg-gradient-to-br from-blue-900/20 to-purple-900/20 rounded-2xl border border-blue-500/20">
           <h4 className="text-lg font-semibold text-white mb-3 flex items-center">
             <div className="w-2 h-2 bg-green-500 rounded-full mr-3 animate-pulse"></div>
             Currently Learning
@@ -408,7 +408,7 @@ function App() {
               </span>
             ))}
           </div>
-        </div>
+        </div>*/}
       </div>
     </div>
   </div>
