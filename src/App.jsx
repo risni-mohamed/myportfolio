@@ -25,7 +25,7 @@ function App() {
       title: "Mobile Shop Management System", 
       description: "A Standalone System with real-time updates.",
       tech: ["C#", "Microsoft SQL", "Entity Framework", "Windows Forms"],
-      github: "#",
+      github: "https://github.com/risni-mohamed/MobileShopManagementSystem",
       demo: "#"
     },
     
