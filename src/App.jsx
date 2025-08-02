@@ -192,7 +192,7 @@ function App() {
           </span>
         </a>
         
-        <a 
+       {/* <a 
           href="/files/Risni Rafeek.pdf" 
           download="Risni Rafeek.pdf"
           className="group relative px-8 py-4 bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:shadow-purple-500/25"
@@ -202,7 +202,7 @@ function App() {
             Resume
           </span>
         </a>
-        
+        */}
         <a 
           href="#contact" 
           className="group relative px-8 py-4 border-2 border-gray-600 hover:border-gray-400 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 bg-gray-800/50 hover:bg-gray-700/50 backdrop-blur-sm"
