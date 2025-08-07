@@ -18,8 +18,8 @@ function App() {
       title: "Car Rental and Booking Website",
       description: "A full-stack Booking the Car solution built with React, Node.js, and Firebase.",
       tech: ["React", "Node.js", "Firebase", "Stripe"],
-      github: "#",
-      demo: "#"
+      github: "https://github.com/risni-mohamed/car-rental",
+      demo: "https://www.linkedin.com/posts/mohamadrizni_reactjs-firebase-webdevelopment-activity-7357863314762219520-afwB?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFOfHuUB0neWqVKhYXka073X9ViyvKY6DnQ"
     },
     {
       title: "Mobile Shop Management System", 
