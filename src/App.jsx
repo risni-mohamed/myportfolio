@@ -18,7 +18,7 @@ function App() {
       title: "Car Rental and Booking Website",
       description: "A full-stack Booking the Car solution built with React, Node.js, and Firebase.",
       tech: ["React", "Node.js", "Firebase", "Stripe"],
-      github: "https://github.com/risni-mohamed/car-rental",
+      github: "https://github.com/risni-mohamed/car-rental-and-booking-website",
       demo: "https://www.linkedin.com/posts/mohamadrizni_reactjs-firebase-webdevelopment-activity-7357863314762219520-afwB?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFOfHuUB0neWqVKhYXka073X9ViyvKY6DnQ"
     },
     {
