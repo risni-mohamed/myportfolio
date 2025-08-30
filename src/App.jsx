@@ -8,6 +8,13 @@ function App() {
 
   const projects = [
     {
+      title: "Sample Startup Website",
+      description: "Modern, fast, and fully responsive solutions to grow your business.",
+      tech: ["React", "TailwindCSS"],
+      github: "https://github.com/risni-mohamed/startup-website",
+      demo: "https://startup-website-risni.vercel.app/"
+    },
+    {
       title: "My Portfolio Website",
       description: "A responsive portfolio Website.",
       tech: ["React", "TailwindCSS"],
