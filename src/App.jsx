@@ -2,6 +2,10 @@ import React, { useState } from 'react';
 import { Github, Linkedin, Mail, ExternalLink, Menu, X, Twitter, Instagram, Facebook, Youtube, MessageCircle, Send} from 'lucide-react';
 import profileImage from './images/profile.jpg';
 import { Download } from 'lucide-react';
+import carRentalImg from './images/car-rental.png';
+import myPortfolioImg from './images/myportfolio.png';
+import startUp from './images/startup.png';
+import mSm from './images/msm.png';
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -12,28 +16,32 @@ function App() {
       description: "Modern, fast, and fully responsive solutions to grow your business.",
       tech: ["React", "TailwindCSS"],
       github: "https://github.com/risni-mohamed/startup-website",
-      demo: "https://startup-website-risni.vercel.app/"
+      demo: "https://startup-website-risni.vercel.app/",
+      image: startUp,
     },
     {
       title: "My Portfolio Website",
       description: "A responsive portfolio Website.",
       tech: ["React", "TailwindCSS"],
       github: "https://github.com/risni-mohamed/myportfolio",
-      demo: "https://risnimhdofficial.vercel.app/"
+      demo: "https://risnimhdofficial.vercel.app/",
+      image: myPortfolioImg,
     },
     {
       title: "Car Rental and Booking Website",
       description: "A full-stack Booking the Car solution built with React, Node.js, and Firebase.",
       tech: ["React", "Node.js", "Firebase", "Stripe"],
       github: "https://github.com/risni-mohamed/car-rental-and-booking-website",
-      demo: "https://www.linkedin.com/posts/mohamadrizni_reactjs-firebase-webdevelopment-activity-7357863314762219520-afwB?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFOfHuUB0neWqVKhYXka073X9ViyvKY6DnQ"
+      demo: "https://www.linkedin.com/posts/mohamadrizni_reactjs-firebase-webdevelopment-activity-7357863314762219520-afwB?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFOfHuUB0neWqVKhYXka073X9ViyvKY6DnQ",
+      image: carRentalImg,
     },
     {
       title: "Mobile Shop Management System", 
       description: "A Standalone System with real-time updates.",
       tech: ["C#", "Microsoft SQL", "Entity Framework", "Windows Forms"],
       github: "https://github.com/risni-mohamed/MobileShopManagementSystem",
-      demo: "#"
+      demo: "#",
+      image: mSm,
     },
     
   ];
@@ -343,7 +351,7 @@ function App() {
         {/* Stats */}
         <div className="grid grid-cols-3 gap-4">
           <div className="text-center p-4 bg-gray-800/30 rounded-xl border border-gray-700/30">
-            <div className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">3</div>
+            <div className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">4</div>
             <div className="text-sm text-gray-400">Projects</div>
           </div>
           <div className="text-center p-4 bg-gray-800/30 rounded-xl border border-gray-700/30">
@@ -564,7 +572,7 @@ function App() {
                 </div>
 
                 <h3 className="text-xl font-bold text-white mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-pink-500 transition-all duration-300">
-                  G.C.E. Advanced Level - Combined Mathematics
+                  G.C.E. Advanced Level - Physical Science
                 </h3>
 
                 <div className="flex items-center text-gray-300 mb-3">
@@ -665,6 +673,18 @@ function App() {
             <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-100 transition-colors duration-300">
               {project.title}
             </h3>
+
+            {/* Project image */}
+              {project.image && (
+                <div className="mb-4">
+                  <img 
+                    src={project.image} 
+                    alt={project.title} 
+                    className="w-full h-48 object-cover rounded-xl border border-gray-700/50"
+                  />
+                </div>
+              )}
+
 
             {/* Project description */}
             <p className="text-gray-300 mb-6 text-sm leading-relaxed group-hover:text-gray-200 transition-colors duration-300">
