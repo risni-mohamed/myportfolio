@@ -6,11 +6,20 @@ import carRentalImg from './images/car-rental.png';
 import myPortfolioImg from './images/myportfolio.png';
 import startUp from './images/startup.png';
 import mSm from './images/msm.png';
+import toDoApp from './images/todo.png';
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const projects = [
+    {
+      title: "ToDoApp",
+      description: "A sleek and efficient task management app built for productivity, featuring a clean UI and responsive design.",
+      tech: ["Python", "Django", "HTML", "CSS"],
+      github: "https://github.com/risni-mohamed/ToDoApp",
+      demo: "#",
+      image: toDoApp,
+    },
     {
       title: "Sample Startup Website",
       description: "Modern, fast, and fully responsive solutions to grow your business.",
@@ -351,7 +360,7 @@ function App() {
         {/* Stats */}
         <div className="grid grid-cols-3 gap-4">
           <div className="text-center p-4 bg-gray-800/30 rounded-xl border border-gray-700/30">
-            <div className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">4</div>
+            <div className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">5</div>
             <div className="text-sm text-gray-400">Projects</div>
           </div>
           <div className="text-center p-4 bg-gray-800/30 rounded-xl border border-gray-700/30">
