@@ -56,7 +56,7 @@ function App() {
   ];
 
   const skills = [
-    "HTML/CSS", "JavaScript", "React", "Node.js",  "C#", "SQL", "PHP",
+    "HTML/CSS", "JavaScript", "React", "Node.js",  "C#", "SQL", "PHP","Python", "Django",
     "Firebase", "Git", "GitHub", "Visual Studio Code", "Canva", "Figma"
   ];
 
