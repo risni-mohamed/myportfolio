@@ -83,92 +83,125 @@ function App() {
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300">
 
-      <nav className="fixed top-0 w-full bg-white/95 dark:bg-gray-900/95 backdrop-blur-md z-50 border-b border-gray-200/50 dark:border-gray-700/50 shadow-lg shadow-gray-300/20 dark:shadow-black/20 transition-colors duration-300">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center py-4">
-            <div className="relative group">
-              <div className="text-2xl font-bold bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent hover:from-blue-300 hover:via-purple-400 hover:to-pink-400 transition-all duration-300 cursor-pointer">
-                Risni Rafeek
-              </div>
-              <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-purple-500 group-hover:w-full transition-all duration-300"></div>
-            </div>
+      <nav className="fixed top-0 w-full z-50 transition-all duration-500">
+        {/* Animated gradient border */}
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
-            {/* Theme Toggle Button */}
-            <button
-              onClick={toggleTheme}
-              className="hidden md:flex items-center justify-center p-2 rounded-lg bg-gray-100 dark:bg-gray-800/50 hover:bg-gray-200 dark:hover:bg-gray-700/50 border border-gray-300 dark:border-gray-700/50 hover:border-gray-400 dark:hover:border-gray-600 transition-all duration-300 group"
-              aria-label="Toggle theme"
-            >
-              <div className="relative w-5 h-5">
-                <Sun className="absolute inset-0 text-yellow-500 transition-all duration-300 rotate-0 scale-100 dark:rotate-90 dark:scale-0" size={20} />
-                <Moon className="absolute inset-0 text-blue-400 transition-all duration-300 rotate-90 scale-0 dark:rotate-0 dark:scale-100" size={20} />
-              </div>
-            </button>
+        {/* Main navbar with glassmorphism */}
+        <div className="relative bg-white/80 dark:bg-gray-900/80 backdrop-blur-xl border-b border-white/20 dark:border-gray-700/30 shadow-2xl shadow-gray-900/10 dark:shadow-black/30">
+          {/* Subtle gradient overlay */}
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 via-purple-500/5 to-pink-500/5 pointer-events-none"></div>
 
-            <div className="hidden md:flex space-x-1">
-              {['Home', 'About', 'Education', 'Projects', 'Contact'].map((item) => (
-                <a
-                  key={item}
-                  href={`#${item.toLowerCase()}`}
-                  className="relative px-4 py-2 rounded-lg font-medium text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-all duration-300 group overflow-hidden"
-                >
-                  <span className="relative z-10">{item}</span>
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:scale-105"></div>
-                  <div className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-purple-500 group-hover:w-full group-hover:left-0 transition-all duration-300"></div>
-                </a>
-              ))}
-            </div>
-
-
-            {/* Mobile controls */}
-            <div className="flex md:hidden items-center space-x-2">
-              {/* Mobile Theme Toggle */}
-              <button
-                onClick={toggleTheme}
-                className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800/50 hover:bg-gray-200 dark:hover:bg-gray-700/50 border border-gray-300 dark:border-gray-700/50 hover:border-gray-400 dark:hover:border-gray-600 transition-all duration-300"
-                aria-label="Toggle theme"
-              >
-                <div className="relative w-5 h-5">
-                  <Sun className="absolute inset-0 text-yellow-500 transition-all duration-300 rotate-0 scale-100 dark:rotate-90 dark:scale-0" size={20} />
-                  <Moon className="absolute inset-0 text-blue-400 transition-all duration-300 rotate-90 scale-0 dark:rotate-0 dark:scale-100" size={20} />
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex justify-between items-center py-4">
+              {/* Logo with enhanced animation */}
+              <div className="relative group">
+                <div className="absolute -inset-2 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 rounded-lg blur-lg opacity-0 group-hover:opacity-30 transition-all duration-500 animate-pulse"></div>
+                <div className="relative text-2xl font-bold bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent hover:from-blue-300 hover:via-purple-400 hover:to-pink-400 transition-all duration-500 cursor-pointer animate-gradient bg-[length:200%_auto]">
+                  Risni Rafeek
                 </div>
-              </button>
+                <div className="absolute -bottom-1 left-0 w-0 h-1 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 group-hover:w-full transition-all duration-500 rounded-full shadow-lg shadow-purple-500/50"></div>
+              </div>
 
-              {/* Mobile Menu Button */}
-              <button
-                className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800/50 hover:bg-gray-200 dark:hover:bg-gray-700/50 border border-gray-300 dark:border-gray-700/50 hover:border-gray-400 dark:hover:border-gray-600 transition-all duration-300 group"
-                onClick={() => setIsMenuOpen(!isMenuOpen)}
-              >
-                <div className="relative">
-                  {isMenuOpen ? (
-                    <X size={24} className="text-gray-700 dark:text-gray-300 group-hover:text-gray-900 dark:group-hover:text-white transition-colors duration-300 group-hover:rotate-90" />
-                  ) : (
-                    <Menu size={24} className="text-gray-700 dark:text-gray-300 group-hover:text-gray-900 dark:group-hover:text-white transition-colors duration-300" />
-                  )}
-                </div>
-              </button>
-            </div>
-
-            {isMenuOpen && (
-              <div className="md:hidden py-6 border-t border-gray-200/50 dark:border-gray-700/50 bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm transition-colors duration-300">
-                <div className="flex flex-col space-y-2">
-                  {['Home', 'About', 'Education', 'Projects', 'Contact'].map((item, index) => (
+              {/* Desktop Navigation */}
+              <div className="hidden md:flex items-center space-x-2">
+                {/* Navigation Links */}
+                <div className="flex space-x-1 mr-4">
+                  {['Home', 'About', 'Education', 'Projects', 'Contact'].map((item) => (
                     <a
                       key={item}
                       href={`#${item.toLowerCase()}`}
-                      className="relative px-4 py-3 rounded-lg font-medium text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-all duration-300 group overflow-hidden"
-                      style={{
-                        animationDelay: `${index * 100}ms`,
-                        animation: 'slideIn 0.3s ease-out forwards'
-                      }}
+                      className="relative px-5 py-2.5 rounded-xl font-medium text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-all duration-300 group overflow-hidden"
                     >
-                      <span className="relative z-10 flex items-center">
-                        <div className="w-2 h-2 rounded-full bg-gradient-to-r from-blue-400 to-purple-500 mr-3 opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:scale-110"></div>
-                        {item}
-                      </span>
-                      <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-full group-hover:translate-x-0"></div>
+                      <span className="relative z-10">{item}</span>
+                      {/* Hover background with glassmorphism */}
+                      <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-pink-500/10 backdrop-blur-sm rounded-xl opacity-0 group-hover:opacity-100 transition-all duration-300 transform scale-95 group-hover:scale-100"></div>
+                      {/* Animated border */}
+                      <div className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-all duration-300">
+                        <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 opacity-20"></div>
+                      </div>
+                      {/* Bottom indicator */}
+                      <div className="absolute bottom-0 left-1/2 w-0 h-1 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 group-hover:w-4/5 group-hover:left-[10%] transition-all duration-500 rounded-full shadow-lg shadow-purple-500/50"></div>
                     </a>
                   ))}
+                </div>
+
+                {/* Theme Toggle Button - Enhanced */}
+                <button
+                  onClick={toggleTheme}
+                  className="relative p-3 rounded-xl bg-gradient-to-br from-gray-100/80 to-gray-200/80 dark:from-gray-800/80 dark:to-gray-700/80 backdrop-blur-sm hover:from-gray-200 hover:to-gray-300 dark:hover:from-gray-700 dark:hover:to-gray-600 border border-gray-300/50 dark:border-gray-600/50 hover:border-blue-400/50 dark:hover:border-purple-400/50 transition-all duration-300 group overflow-hidden shadow-lg hover:shadow-xl hover:shadow-blue-500/20 dark:hover:shadow-purple-500/20"
+                  aria-label="Toggle theme"
+                >
+                  {/* Animated background */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
+                  <div className="relative w-5 h-5">
+                    <Sun className="absolute inset-0 text-yellow-500 transition-all duration-500 rotate-0 scale-100 dark:rotate-180 dark:scale-0 group-hover:drop-shadow-[0_0_8px_rgba(234,179,8,0.5)]" size={20} />
+                    <Moon className="absolute inset-0 text-blue-400 transition-all duration-500 rotate-180 scale-0 dark:rotate-0 dark:scale-100 group-hover:drop-shadow-[0_0_8px_rgba(96,165,250,0.5)]" size={20} />
+                  </div>
+                </button>
+              </div>
+
+              {/* Mobile controls */}
+              <div className="flex md:hidden items-center space-x-2">
+                {/* Mobile Theme Toggle - Enhanced */}
+                <button
+                  onClick={toggleTheme}
+                  className="relative p-2.5 rounded-xl bg-gradient-to-br from-gray-100/80 to-gray-200/80 dark:from-gray-800/80 dark:to-gray-700/80 backdrop-blur-sm border border-gray-300/50 dark:border-gray-600/50 hover:border-blue-400/50 dark:hover:border-purple-400/50 transition-all duration-300 shadow-lg"
+                  aria-label="Toggle theme"
+                >
+                  <div className="relative w-5 h-5">
+                    <Sun className="absolute inset-0 text-yellow-500 transition-all duration-500 rotate-0 scale-100 dark:rotate-180 dark:scale-0" size={20} />
+                    <Moon className="absolute inset-0 text-blue-400 transition-all duration-500 rotate-180 scale-0 dark:rotate-0 dark:scale-100" size={20} />
+                  </div>
+                </button>
+
+                {/* Mobile Menu Button - Enhanced */}
+                <button
+                  className="relative p-2.5 rounded-xl bg-gradient-to-br from-gray-100/80 to-gray-200/80 dark:from-gray-800/80 dark:to-gray-700/80 backdrop-blur-sm border border-gray-300/50 dark:border-gray-600/50 hover:border-blue-400/50 dark:hover:border-purple-400/50 transition-all duration-300 group shadow-lg"
+                  onClick={() => setIsMenuOpen(!isMenuOpen)}
+                >
+                  <div className="relative">
+                    {isMenuOpen ? (
+                      <X size={24} className="text-gray-700 dark:text-gray-300 group-hover:text-blue-600 dark:group-hover:text-purple-400 transition-all duration-300 group-hover:rotate-90" />
+                    ) : (
+                      <Menu size={24} className="text-gray-700 dark:text-gray-300 group-hover:text-blue-600 dark:group-hover:text-purple-400 transition-all duration-300" />
+                    )}
+                  </div>
+                </button>
+              </div>
+            </div>
+
+            {/* Mobile Menu - Enhanced */}
+            {isMenuOpen && (
+              <div className="md:hidden absolute top-full left-0 right-0 mt-1 mx-4 rounded-2xl overflow-hidden bg-white/90 dark:bg-gray-900/90 backdrop-blur-xl border border-white/20 dark:border-gray-700/30 shadow-2xl shadow-gray-900/20 dark:shadow-black/40">
+                {/* Gradient overlay */}
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-purple-500/5 to-pink-500/5 pointer-events-none"></div>
+
+                <div className="relative py-4 px-2">
+                  <div className="flex flex-col space-y-1">
+                    {['Home', 'About', 'Education', 'Projects', 'Contact'].map((item, index) => (
+                      <a
+                        key={item}
+                        href={`#${item.toLowerCase()}`}
+                        onClick={() => setIsMenuOpen(false)}
+                        className="relative px-4 py-3 rounded-xl font-medium text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-all duration-300 group overflow-hidden"
+                        style={{
+                          animationDelay: `${index * 50}ms`,
+                          animation: 'slideIn 0.4s ease-out forwards'
+                        }}
+                      >
+                        <span className="relative z-10 flex items-center">
+                          <div className="w-2 h-2 rounded-full bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 mr-3 opacity-0 group-hover:opacity-100 transition-all duration-300 transform scale-0 group-hover:scale-110 shadow-lg shadow-purple-500/50"></div>
+                          {item}
+                        </span>
+                        {/* Hover background */}
+                        <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-pink-500/10 rounded-xl opacity-0 group-hover:opacity-100 transition-all duration-300 transform -translate-x-full group-hover:translate-x-0"></div>
+                        {/* Border accent */}
+                        <div className="absolute left-0 top-1/2 -translate-y-1/2 w-0 h-1/2 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 group-hover:w-1 transition-all duration-300 rounded-r-full"></div>
+                      </a>
+                    ))}
+                  </div>
                 </div>
               </div>
             )}
